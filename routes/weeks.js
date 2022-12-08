@@ -6,6 +6,7 @@ const weekController = require('../controllers/weeks');
 
 
 router.get('/new',  weekController.new);
+router.post('/', weekController.create);
 router.get('/', weekController.index);
 // router.post('/', isLoggedIn, movieCtrl.create);
 

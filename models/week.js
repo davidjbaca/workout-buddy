@@ -17,6 +17,10 @@ const workoutSchema = new Schema(
 
     cardio: {
         type: Boolean, 
+    }, 
+    
+    sauna: {
+        type: Boolean,
     }
 
   },
@@ -27,10 +31,20 @@ const workoutSchema = new Schema(
 
 
 const weekSchema = new Schema({
-  week: String,
 
+    week:{
+        type: String,
+    }, 
+
+    goal:{
+
+        type: String, 
+    },
+    TotalDays:{
+        type: String, 
+    },
  
-  workouts: [workoutSchema] 
+    workouts: [workoutSchema] 
 });
 
 
