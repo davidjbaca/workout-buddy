@@ -31,18 +31,10 @@ const workoutSchema = new Schema(
 
 
 const weekSchema = new Schema({
+    week: String,
+    goal: String,
+    totalDays: String,
 
-    week:{
-        type: String,
-    }, 
-
-    goal:{
-
-        type: String, 
-    },
-    TotalDays:{
-        type: String, 
-    },
  
     workouts: [workoutSchema] 
 });

@@ -6,6 +6,8 @@ const Week = require("../models/week");
 
 function index(req, res){
 
+
+
 	Week.find({}, function(err, weekDocs){
 		
 		console.log(weekDocs)

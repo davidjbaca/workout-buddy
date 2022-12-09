@@ -1,14 +1,21 @@
+<%- include('../partials/header') %>
 <table id="list">
-    <thead>
+  <thead>
+    <tr>
+      <th>Week</th>
+      <th>Goal</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% weeks.forEach(function(w) { %>
       <tr>
-        <th>Weeks</th>
-        <br>
-        <br>
-        <th>This weeks Goal!</th>
-        <th></th>
+        <td><%= w.week %></td>
+        <td><%= w.goal %></td>
+        <td><a href="/weeks/<%= w._id %>">DETAILS</a></td>
       </tr>
-    </thead>
-    <tbody>
-
-      </tbody>
-    </table>
+      <% }); %>
+    </tbody>
+  </table>
+  
+<%- include('../partials/footer') %>
