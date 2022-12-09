@@ -2,7 +2,11 @@ const Week = require("../models/week");
 
 
 
-
+function show(req, res) {
+	Week.findById(req.params.id, function(err, weekDoc){
+		res.render('weeks/show', { weeks: weekDoc});
+	});
+}
 
 function index(req, res){
 
@@ -12,7 +16,7 @@ function index(req, res){
 		
 		console.log(weekDocs)
 
-		res.render('weeks/index', {weeks: weekDocs, name: ''})
+		res.render('weeks/index', {weeks: weekDocs})
 	})
 
 }
@@ -46,4 +50,5 @@ function index(req, res){
     
     new: newWeek,
     create,
+	show,
     index };

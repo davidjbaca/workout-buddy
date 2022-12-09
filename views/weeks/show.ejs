@@ -1,113 +1,31 @@
 <%- include('../partials/header') %>
 
-<section id="show-page">
-    <div>Week: </div>
-    <div>
-      <%= week.title %>
-    </div>
-    <div>This weeks Goal!: </div>
-    <div>
-      <%= week.Goal %>
-    </div>
-    <div>Projected Days working out this week.: </div>
-    <div>
-      <%= week.TotalDays %>
-    </div>
-
-
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight <%= flight.flightNo%> </title>
+    <title>Weeks <%= weeks%> </title>
     <%- include('../partials/header') %>
 </head>
 <body>
-    <section id="show-page">
-    </br>
-        <div>Airline: </div>
-    
-        <div><%= flight.airline %></div>
-    </br>
-        <div>Departure Airport: </div>
-    
-        <div><%= flight.airport %></div>
-    </br>
-        <div>Flight Number: </div>
-    
-        <div><%= flight.flightNo %></div>
-    </br>
-        <div>Date: </div>
-    
-        <div><%= flight.departs %></div>
+  
+<section id="show-page">
+    <div>Week: </div>
+    <div>
+      <%= week.week %>
+    </div>
+    <div>This weeks Goal!: </div>
+    <div>
+      <%= week.goal %>
+    </div>
+    <div>Projected Days working out this week.: </div>
+    <div>
+      <%= week.totalDays %>
+    </div>
 
-        <br>
-        <br>
-
-        <div><strong>Tickets & Pricing</strong></div>
-        <ul>
-          <% tickets.forEach(ticket => { %>
-          <li>SEAT: <%= ticket.seat %> Price: <%= ticket.price %>  </li> 
-          <% }) %> 
-        </ul>
-        <a href="/flights/<%=flight._id%>/tickets/new"><button>Add Ticket</button></a>
-
-
-    </section>
-
-    <br />
-    <br />
-    
-    <br><br><h2>Destinations</h2>
-    <form id="add-destinations" method="POST"
-    action="/flights/<%= flight._id %>/destinations">
-    <label>Airport:</label>
-    <select name="airport">
-      <option value="AUS">AUS</option>
-      <option value="DFW">DFW</option>
-      <option value="DEN">DEN</option>
-      <option value="LAX">LAX</option>
-      <option value="SAN">SAN</option>
-    </select>
-
-
-
-
-
-
-    <label>Arrival:</label>
-        
-             <input type="datetime-local" name="arrival" %>">
-        <input type="submit" value="Add Destination Airport">
-        </form>
-
-  <% if (flight.destinations.length) { %>
-    <table>
-      <thead>
-      <tr>
-        <th>Destination Airport</th>
-        <th>Arrival</th>
-        
-      </tr>
-      </thead>
-      <tbody>
-      <% flight.destinations.forEach(function(d) { %>
-        <tr>
-        <td><%= d.airport %></td>
-        <td><%= d.arrival %></td>
-       
-        
-        </tr>
-      <% }); %>
-      </tbody>
-    </table>
-    <% } else { %>
-    <h5>No Destinations Yet</h5>
-    <% } %>
-
-    
 </body>
+
 <%- include('../partials/footer') %>
 </html>
