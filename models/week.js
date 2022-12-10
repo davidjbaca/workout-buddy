@@ -9,21 +9,21 @@ const workoutSchema = new Schema(
         type: String,
         enum: ['Mon', 'Tue', 'Wed', 'Thur', 'Fri', 'Sat', 'Sun']
     },
-
     bodyPart:{
         type: String, 
         enum: ['Chest', 'Shoulders', 'Back', 'Legs' ]
     },
-
     cardio: {
-        type: Boolean, 
-    }, 
-    
+        type: String,
+        enum: ['Yes', 'No'],
+        default: null,
+    },  
     sauna: {
-        type: Boolean,
+        type: String,
+        enum: ['Yes', 'No'],
+        default: null,
     }
-
-  },
+    },
   {
     timestamps: true,
   }

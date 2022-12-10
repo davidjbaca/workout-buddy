@@ -4,7 +4,7 @@ const Week = require("../models/week");
 
 function show(req, res) {
 	Week.findById(req.params.id, function(err, weekDoc){
-		res.render('weeks/show', { weeks: weekDoc});
+		res.render('weeks/show', { week: weekDoc});
 	});
 }
 
@@ -27,6 +27,12 @@ function index(req, res){
   
   function create(req,res){
 
+	req.body.cardio = !!req.body.cardio;
+
+	req.body.sauna = !!req.body.sauna;
+
+	console.log(req.body,'after');
+
     console.log(req.body,'contents of the form');
 
     Week.create(req.body, function(err, weekDoc){
@@ -37,8 +43,9 @@ function index(req, res){
 	
 		console.log(weekDoc);
 
-		res.redirect('/weeks')
+		
 		}
+		res.redirect(`/weeks/${weekDoc._id}`);
 	}); 
 
     

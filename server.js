@@ -10,6 +10,7 @@ const passport = require('passport');
 const methodOverride = require('method-override');
 const indexRouter = require('./routes/index');
 const weekRouter = require('./routes/weeks');
+const workoutsRouter = require('./routes/workouts');
 
 
 
@@ -54,6 +55,7 @@ app.use(function (req, res, next) {
 // mount all routes with appropriate base paths
 app.use('/', indexRouter);
 app.use('/weeks', weekRouter);
+app.use('/', workoutsRouter);
 
 
 
