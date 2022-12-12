@@ -26,6 +26,7 @@
   </section>
 
   <br><br><h2>Workout Log</h2>
+  <% if (user){ %> 
   <form id="add-workout-form" method="POST"
   action="/weeks/<%= week._id %>/workouts"> 
   <label>Day</label>
@@ -60,36 +61,63 @@
   </select>
   <input type="Submit" value="Add Workout">
 
+  <% } else { %>
 
-  <% if (week.workouts.length) { %>
-    <table>
-      <thead>
-      <tr>
-        <th>Day</th>
-        <th>What we hit today</th>
-        <th>Cardio</th>
-        <th>Sauna</th>
+    <span>You have to login in order to add a workout</span>
 
-        
-      </tr>
-      </thead>
-      <tbody>
-      <% week.workouts.forEach(function(w) { %>
-        <tr>
-        <td><%= w.day %></td>
-        <td><%= w.bodyPart %></td>
-        <td><%= w.cardio %></td>
-        <td><%= w.sauna %></td>
-       
-        
-        </tr>
-      <% }); %>
-      </tbody>
-    </table>
-    <% } else { %>
-    <h5>No Days Logged Yet</h5>
+
+
     <% } %>
-</body>
+
+    <% if (week.workouts.length) { %>
+      <table>
+        <thead>
+          <tr>
+            <th>Day</th>
+            <th>What you worked out</th>
+            <th>Cardio</th>
+            <th>Sauna</th>
+          </tr>
+        </thead>
+        <tbody>
+
+            <% week.workouts.forEach(function(w) { %>
+
+
+                <tr>
+                
+
+                  <td>
+                    <%= w.day %>
+                  </td>
+                  <td>
+                    <%= w.bodyPart %>
+                  </td>
+                  <td>
+                    <%= w.cardio %>
+                  </td>
+                  <td>
+                    <%= w.sauna %>
+
+
+                      <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
+                        <button type="submit">Delete</button>
+                      </form>
+                    </td>
+
+                <% }); %>
+
+        </tbody>
+      </table>
+      <% } else { %>
+        <h5>No Workouts Yet</h5>
+        <% } %>
+
+
+
+
+
+
 
 <%- include('../partials/footer') %>
 </html>

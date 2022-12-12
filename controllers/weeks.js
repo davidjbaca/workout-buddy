@@ -27,11 +27,11 @@ function index(req, res){
   
   function create(req,res){
 
-	req.body.cardio = !!req.body.cardio;
+	// req.body.cardio = !!req.body.cardio;
 
-	req.body.sauna = !!req.body.sauna;
+	// req.body.sauna = !!req.body.sauna;
 
-	console.log(req.body,'after');
+	// console.log(req.body,'after');
 
     console.log(req.body,'contents of the form');
 
