@@ -9,6 +9,6 @@ router.get('/new',  weekController.new);
 router.post('/', weekController.create);
 router.get('/', weekController.index);
 // router.post('/', isLoggedIn, weekController.create);
-router.get('/:id', weekController.show)
+router.get('/:id', weekController.show);
 
 module.exports = router;

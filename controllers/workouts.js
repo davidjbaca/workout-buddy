@@ -1,22 +1,44 @@
 
+const week = require("../models/week");
 const Week = require("../models/week");
 
 module.exports = {
   create, 
-  delete: deleteWorkout
+  delete: deleteWorkout,
+  edit,
+  update
  
 };
 
+function edit(req,res){
+
+    res.render('weeks/edit' , {w: req.params.id});
+
+
+}
+
+function update(req, res) {
+  Week.findOneAndUpdate(
+    {'workouts._id': req.params.id, 'workouts.user': req.user._id},
+
+    req.body,
+
+    {new: true},
+    function(err, weekDoc) {
+      if (err || !weekDoc) return res.redirect('/weeks');
+      res.redirect(`/weeks/${weekDoc._id}`);
+    }
+  );
+}
 
 function deleteWorkout(req, res){
 
-  // First have to find the Movie with the review
+
   Week.findOne({'workouts._id': req.params.id, 'workouts.user': req.user._id}, function(err, weekDoc){
-    // rogue user
+ 
     if(!weekDoc) return res.redirect('/weeks');
 
-    // remove the subdoc from the movie array
-    // req.params.id is the review subdoc id
+
     weekDoc.workouts.remove(req.params.id);
 
     weekDoc.save(function(err){
@@ -39,7 +61,7 @@ function create(req, res) {
     }
 
     console.log("========================");
-    // found wee from the database that we want to add the review (req.body) to!
+   
     console.log(weekDoc, " <- week from the database!");
     console.log("========================");
     req.body.user = req.user._id;
@@ -50,7 +72,7 @@ function create(req, res) {
 
     weekDoc.save(function (err) {
       // respond to the clinet
-	//   console.log(weeDoc)
+	//   console.log(weekDoc)
 	  console.log(err, " <_ err from weekDoc.save callback")
 
       res.redirect(`/weeks/${req.params.id}`);

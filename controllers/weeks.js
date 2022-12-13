@@ -3,6 +3,8 @@ const Week = require("../models/week");
 
 
 function show(req, res) {
+
+	console.log(req.params.id , "<-------object-->")
 	Week.findById(req.params.id, function(err, weekDoc){
 		res.render('weeks/show', { week: weekDoc});
 	});

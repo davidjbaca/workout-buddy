@@ -29,3 +29,24 @@
 .login img {
   height: 30px;
 }
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: Helvetica;
+  color: #1c188d;
+}
+
+
+body > nav {
+  grid-area: nav;
+  background-color: #B8C0C2;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}

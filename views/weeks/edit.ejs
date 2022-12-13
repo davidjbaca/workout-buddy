@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Workout</title>
+    <%- include('../partials/header') %>
+</head>
+<body>
+    <h2>Edit your workout</h2>
+    <% if (user){ %> 
+    <form id="edit-form" action="/workouts/<%= w %>?_method=PUT" method="POST">
+            <label>Day</label>
+            <select name="day">
+                <option value="Mon">Mon</option>
+                <option value="Tue">Tue</option>
+                <option value="Wed">Wed</option>
+                <option value="Thur">Thur</option>
+                <option value="Fri">Fri</option>
+                <option value="Sat">Sat</option>
+                <option value="Sun">Sun</option>
+              </select>
+              <label>Body Part of the Workout</label>
+              <select name="bodyPart">
+                <option value=" ">Select</option>
+                <option value="Chest">Chest</option>
+                <option value="Shoulders">Shoulders</option>
+                <option value="Back">Back</option>
+                <option value="Legs">Legs</option>
+              </select>
+              <label>Cardio</label>
+              <select name="cardio">
+                <option value=" ">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+              <label>Sauna</label>
+              <select name="sauna">
+                <option value=" ">Select</option>
+                <option value="Yes">Yes</option>
+                <option value="No">No</option>
+              </select>
+        </label><br>
+
+        <input type="submit" value="Complete Edit">
+      </form>
+      <% }else { %> 
+    
+        <span>You have to login in order to edit a workout</span>
+
+
+
+        <% } %>
+    
+
+</body>
+</html>

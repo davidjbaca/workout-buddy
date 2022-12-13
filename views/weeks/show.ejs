@@ -10,6 +10,7 @@
 </head>
 <body>
   
+  <% if (user){ %> 
   <section id="show-page">
     <div>Week: </div>
     <div>
@@ -26,7 +27,7 @@
   </section>
 
   <br><br><h2>Workout Log</h2>
-  <% if (user){ %> 
+  
   <form id="add-workout-form" method="POST"
   action="/weeks/<%= week._id %>/workouts"> 
   <label>Day</label>
@@ -60,7 +61,7 @@
     <option value="No">No</option>
   </select>
   <input type="Submit" value="Add Workout">
-
+</form>
   <% } else { %>
 
     <span>You have to login in order to add a workout</span>
@@ -103,6 +104,13 @@
                       <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
                       </form>
+
+
+                        <a href="/workouts/<%= w._id %>/edit"><button type="submit">Edit Workout</button></a>
+                        
+
+
+
                     </td>
 
                 <% }); %>
