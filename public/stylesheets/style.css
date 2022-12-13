@@ -26,10 +26,20 @@ ul.topnav li a {
 
 button{
   border: none;
-  margin: 3vmin;
+  margin: vmin;
   border-radius: 5vmin; 
   justify-content: center;
   outline: none;
+}
+
+nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+} 
+
+.login img {
+  height: 30px;
 }
 
 /* 
@@ -61,14 +71,7 @@ button{
   height: 34px;
 } */
 
-/* .login img {
-  height: 30px;
-}
-nav > img {
-  width: 34px;
-  object-fit: contain;
-  margin-right: auto;
-} */
+
 
 /* * {
   box-sizing: border-box;
