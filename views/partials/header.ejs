@@ -11,12 +11,14 @@
 
 <body>
   <nav>
-    <a href="/weeks">All Weeks</a>
+    <ul>
+    <li><a href="/weeks">All Weeks</a></li>
     <% if (user) { %>
-      <a href="/weeks/new" >Add Week</a>
-      <a href="/logout">LOG OUT</a>
+    <li><a href="/weeks/new" >Add Week</a></li>
+    <li><a href="/logout">LOG OUT</a></li>
     <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+    <li><a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a></li>
     <% } %>
+    </ul>
   </nav>
-  <main>
+</body>
