@@ -1,13 +1,12 @@
 
 # The Workout Buddy
 
-## Introduction
-
-What do you see when you walk into a gym, if it's the new year you see so many new gym goers that you can be a little frustrated, when it comes from waiting for a machince to making sure you stay on track. A new or experienced gym goer is all subject to want to improve "well that's the hope" it's only natural that you log or keep track of your progress. They don't call them "progress pics" for no reason. One solution you can count on is Workout Buddy, the exercise logger that can help you keep up with your needs, goals and potenitally your progress. 
-
 ## Description 
 
 Creating a logger you can access with your Google account so you can only update and keep track from anywhere and on any device. You're able to create a week, like most workout programs weeks are usually the best way to keep your self accountable and lets you keep track of your progress. You start off by adding the week you want you can name, add a goal of the week along with the numbers of days you want to commit to. After making the week it will appear on your "All weeks" section and you can start logging your daily workouts. 
+
+<img width="1280" alt="Screen shot" src="https://i.imgur.com/w63BvyK.png">
+
 
 #### How it was built
 

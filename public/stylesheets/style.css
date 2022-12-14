@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
-  font-family: Helvetica;
-  color: white;
+  font-family: Copperplate;
+  color: black;
 }
 
 
@@ -17,7 +17,7 @@ ul.topnav li {float: left;}
 
 ul.topnav li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
