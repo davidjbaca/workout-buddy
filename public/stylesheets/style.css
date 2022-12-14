@@ -1,7 +1,7 @@
 * {
   box-sizing: border-box;
   font-family: Helvetica;
-  color: #1f2122;
+  color: white;
 }
 
 
@@ -30,6 +30,7 @@ button{
   border-radius: 5vmin; 
   justify-content: center;
   outline: none;
+  color: black;
 }
 
 
@@ -42,6 +43,8 @@ nav > img {
 .login img {
   height: 30px;
 }
+
+
 
 nav > logo{
   margin-right: auto;
@@ -57,7 +60,15 @@ body > nav {
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
+
+
+  
 } 
+select {
+  color: #333;
+  
+}
+
 
 ul {
 display: grid;
@@ -66,7 +77,9 @@ grid-template-columns:repeat(3,1fr);
 
 table > thead > tr {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(6, 1fr);
+  justify-self: center;
+  
 }
 body > section {
   display: grid;
@@ -75,11 +88,13 @@ body > section {
 
   table > tbody > tr {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
+    justify-self: center;
+    text-align: center;
+
   }
 
-  table > tbody > tr > td {
-    display: grid;
-    grid-template-columns: repeat(1, 1fr);
+  body {
+    background: rgb(7, 131, 232); 
   }
-  
+

@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"></html>
+<html>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -101,15 +102,18 @@
                   </td>
                   <td>
                     <%= w.sauna %>
-
+                  </td>
+                  <td>
 
                       <form action="/workouts/<%= w._id %>?_method=DELETE" method="POST">
                         <button type="submit">Delete</button>
                       </form>
-
+                  </td>
+                  
+                  <td>
 
                         <a href="/workouts/<%= w._id %>/edit"><button type="submit">Edit Workout</button></a>
-                        
+                  </td>  
 
 
 
