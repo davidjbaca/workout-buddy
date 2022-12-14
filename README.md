@@ -3,7 +3,7 @@
 
 ## Description 
 
-Creating a logger you can access with your Google account so you can only update and keep track from anywhere and on any device. You're able to create a week, like most workout programs weeks are usually the best way to keep your self accountable and lets you keep track of your progress. You start off by adding the week you want you can name, add a goal of the week along with the numbers of days you want to commit to. After making the week it will appear on your "All weeks" section and you can start logging your daily workouts. 
+A workout logger can be your greatest tool in your fitness journey from a vetern to the noob that just started. With the Workout Buddy you can access it with your Google account so you can update and keep track from anywhere and on any device. You're able to create a week, like most workout programs weeks are usually the best way to keep your self accountable and lets you keep track of your progress. You start off by adding the week you want you can name, add a goal of the week along with the numbers of days you want to commit to. After making the week it will appear on your "All weeks" section and you can start logging your daily workouts. 
 
 Home page. 
 
