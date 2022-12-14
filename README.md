@@ -22,7 +22,7 @@ Inside the Logger.
 - VS Code
 - GitHub
 - MongoDB
-- Google Auth
+- Passport
 - EJS
 
 ## How to use
