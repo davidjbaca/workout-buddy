@@ -26,7 +26,7 @@ ul.topnav li a {
 
 button{
   border: none;
-  margin: vmin;
+  margin: .5vmin;
   border-radius: 5vmin; 
   justify-content: center;
   outline: none;
@@ -43,49 +43,43 @@ nav > img {
   height: 30px;
 }
 
-/* 
-.brand-logo {
-  margin-left: 15px;
+nav > logo{
+  margin-right: auto;
 }
 
-.card .card-content .card-title {
-  margin-bottom: 10px;
-}
-
-#search-row form {
-  padding-top: 20px;
-}
-
-.student-name {
-  position: relative;
-  top: -5px;
-}
-
-.collection-item form {
-  margin-top: -5px;
-}
-
-.login {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 34px;
-} */
-
-
-
-/* * {
-  box-sizing: border-box;
-  font-family: Helvetica;
-  color: #1009da;
-}
 
 
 body > nav {
   grid-area: nav;
-  background-color: #38d633;
+  grid-row: auto;
   display: flex;
+  flex-direction: row;
   justify-content: flex-end;
   align-items: center;
   padding: 0 20px 0 30px;
-} */
+} 
+
+ul {
+display: grid;
+grid-template-columns:repeat(3,1fr);
+}
+
+table > thead > tr {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+body > section {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr) ;
+  }
+
+  table > tbody > tr {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  table > tbody > tr > td {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+  
