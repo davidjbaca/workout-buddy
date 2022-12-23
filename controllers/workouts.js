@@ -18,18 +18,29 @@ function edit(req,res){
 }
 
 function update(req, res) {
-  Week.findOneAndUpdate(
+  Week.findOne(
     {'workouts._id': req.params.id, 'workouts.user': req.user._id},
 
-    req.body,
-
-    {new: true},
     function(err, weekDoc) {
-      if (err || !weekDoc) return res.redirect('/weeks');
-      res.redirect(`/weeks/${weekDoc._id}`);
+      console.log(err,'<.....error>>>')
+      console.log(weekDoc)
+      let doc = weekDoc.workouts.id(req.params.id)
+      console.log(req.body)
+      doc.day = req.body.day
+      doc.bodyPart = req.body.bodyPart
+      doc.cardio = req.body.cardio
+      doc.sauna = req.body.sauna
+      weekDoc.save(function (err){
+        console.log(err)
+        if (err || !weekDoc) return res.redirect('/weeks');
+        res.redirect(`/weeks/${weekDoc._id}`);
+      })
+
     }
   );
 }
+
+
 
 function deleteWorkout(req, res){
 
@@ -40,6 +51,7 @@ function deleteWorkout(req, res){
 
 
     weekDoc.workouts.remove(req.params.id);
+
 
     weekDoc.save(function(err){
       if(err) return res.send('err, check terminal fix this');
@@ -79,3 +91,26 @@ function create(req, res) {
     });
   });
 }
+
+// async function create(req, res) {
+//   try {
+//     const weekDoc = await Week.findById(req.params.id);
+    
+//       console.log(weekDoc, " <- week from the database!");
+     
+//       req.body.user = req.user._id;
+//       req.body.userName = req.user.name;
+  
+      
+  
+//       weekDoc.workouts.push(req.body);
+  
+//       weekDoc.save(()=>console.log(weekDoc, "this is the weekDoc that has saved"))
+      
+     
+//   } catch (err){
+//     console.log(err, "this is the error")
+//     // res.redirect(`/weeks/${req.params.id}`);
+//   }
+
+// }
