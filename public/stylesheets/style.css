@@ -125,3 +125,7 @@ form#new-form {
 form#add-workout-form {
   display: inline-grid;
 }
+
+form#edit-form {
+  display: inline-grid;
+}
