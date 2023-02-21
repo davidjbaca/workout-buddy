@@ -11,10 +11,26 @@
     <h2>Enter a new week!</h2>
     <form id="new-form" action="/weeks" method="POST">
         <label>Week:
-            <input text="text" name="week">
+            <input
+                type="text"
+                name="week"
+                class="form-control rounded"
+                placeholder="Week number"
+                aria-label="Week"
+                aria-describedby="search-addon"
+            />
+            <!-- <input text="text" name="week"> -->
         </label><br>
         <label>This weeks Goal!:
-            <input type="text" name="goal">
+            <!-- <input type="text" name="goal"> -->
+            <input
+                type="text"
+                name="goal"
+                class="form-control rounded"
+                placeholder="This week's goal"
+                aria-label="Goal"
+                aria-describedby="search-addon"
+            />
         </label><br>
         <label>Projected Days working out this week.
             <select name="totalDays">

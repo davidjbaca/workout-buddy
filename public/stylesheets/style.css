@@ -115,3 +115,8 @@ ul#index {
   display: contents;
   /* justify-content: center; */
 }
+
+form#new-form {
+  display: grid;
+  align-content: space-between;
+}
