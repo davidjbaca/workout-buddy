@@ -31,6 +31,7 @@ button{
   justify-content: center;
   outline: none;
   color: black;
+  width: fit-content;
 }
 
 
