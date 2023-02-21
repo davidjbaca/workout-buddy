@@ -64,6 +64,9 @@ body > nav {
 
   
 } 
+
+
+
 select {
   color: #333;
   
@@ -98,3 +101,17 @@ body > section {
     background: rgb(7, 131, 232); 
   }
 
+section#login {
+display: grid;
+grid-template-columns: auto;
+
+}
+
+li#login {
+  content: auto;
+}
+
+ul#index {
+  display: contents;
+  /* justify-content: center; */
+}
